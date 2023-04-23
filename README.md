@@ -1,9 +1,9 @@
-# Stick-War-2-Kaizo
-Play a diffrent version of the campaign which is **A LOT** harder then normal! Enemies have recieved buffs and the game also buffed some aspects for the player + a newly "reworked" tech system that rewards player
+# What is 'Stick War 2 Kaizo'?
+Play a diffrent version of the bland and rempetitive campaign which we changed to be *harder* and challenge you & your game knowlege to the **extreme**, this mod makes everything much harder and "Fun" with lots of new specialties and a reworked *Upgrade system*.
 
-electric wall upgrade tech
-poison spray upgrade tech
-spearton bash but it doesn't suck (4s CD, stuns for 1s, gives 1.5 75% extra damage reduction) 
-default block 20% (it was always 20% but there was typo)
+*note: only the first part of the campaign is currently availble, AKA every lvl till you first see medusa. We will only expand to the rest of the chaos levels once someone is able to win in the mod and provide proof like a video.*
 
-*Made by the developers of **Stick War 2 custom mods & Shadow Empire***
+## Credits
+- **Mod By:**
+- - **dyzqy** - Programming
+- - **TheShadowEmpire** - Programming & Main idea
