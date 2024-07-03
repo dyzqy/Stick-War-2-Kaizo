@@ -31,6 +31,8 @@ package com.brockw.stickwar.campaign.controllers
             
             private var threeMinConstant:int;
             
+            internal var flag:* = false;
+            
             public function CampaignShadow(param1:GameScreen)
             {
                   this.twoMinTimer = 60 * 30 * 2;
@@ -101,6 +103,11 @@ package com.brockw.stickwar.campaign.controllers
                         this.frames = 0;
                   }
                   CampaignGameScreen(param1).enemyTeamAi.setRespectForEnemy(this.respect);
+                  if(param1.game.frame % (30 * 90) == 0 && this.flag)
+                  {
+                        this.SummonNinja(ninja,param1,1,param1.team.enemyTeam,true);
+                  }
+                  this.flag = true;
                   if(this.threeMinTimer > 0)
                   {
                         if(!param1.isPaused)
@@ -173,6 +180,11 @@ package com.brockw.stickwar.campaign.controllers
                   }
                   CampaignGameScreen(param1).enemyTeamAi.setRespectForEnemy(this.respect);
                   param1.game.team.enemyTeam.tech.isResearchedMap[Tech.TOWER_SPAWN_I] = true;
+                  if(param1.game.frame % (30 * 60) == 0 && this.flag)
+                  {
+                        this.SummonNinja(ninja,param1,1,param1.team.enemyTeam,true);
+                  }
+                  this.flag = true;
                   if(this.twoMinTimer > 0)
                   {
                         if(!param1.isPaused)

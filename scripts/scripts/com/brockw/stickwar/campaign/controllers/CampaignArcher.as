@@ -30,9 +30,10 @@ package com.brockw.stickwar.campaign.controllers
             
             internal var S_DONE:int = 2;
             
+            internal var flag:* = false;
+            
             public function CampaignArcher(param1:GameScreen)
             {
-                  CampaignGameScreen(param1).music = "orderNon-Boss";
                   super(param1);
                   this.twoMinTimer = 60 * 30 * 3;
                   this.twoMinConstant = this.twoMinTimer;
@@ -108,11 +109,16 @@ package com.brockw.stickwar.campaign.controllers
                               --this.twoMinTimer;
                         }
                   }
+                  if(param1.game.frame % (30 * 90) == 0 && this.flag)
+                  {
+                        this.SummonSpearton(spear,param1,1,param1.team.enemyTeam,true,"");
+                  }
                   else if(this.twoMinTimer != -5)
                   {
                         param1.game.team.enemyTeam.tech.isResearchedMap[Tech.SPAWN_SHADOW] = true;
                         this.twoMinTimer = -5;
                   }
+                  this.flag = true;
             }
             
             public function updateArcher(param1:GameScreen) : void

@@ -63,7 +63,7 @@ package com.brockw.stickwar.campaign
                   var _loc5_:URLLoader = null;
                   super();
                   var _loc2_:XMLLoader = new XMLLoader();
-                  this.version = "1.1.1";
+                  this.version = "1.1.2";
                   this.main = param1;
                   this.isFirst = true;
                   this.mc = new campaignMenuMc();
