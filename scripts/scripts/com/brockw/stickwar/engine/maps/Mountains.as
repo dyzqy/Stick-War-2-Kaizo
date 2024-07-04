@@ -2,6 +2,7 @@ package com.brockw.stickwar.engine.maps
 {
       import com.brockw.stickwar.engine.*;
       import flash.display.*;
+      import flash.geom.*;
       
       public class Mountains extends Map
       {
@@ -30,8 +31,13 @@ package com.brockw.stickwar.engine.maps
             override public function init(param1:StickWar) : void
             {
                   var _loc2_:Vector.<MovieClip> = new Vector.<MovieClip>();
-                  _loc2_.push(new mountainsForeground());
-                  _loc2_.push(new mountainsMidground());
+                  var foreground:MovieClip = new mountainsForeground();
+                  var colorTransform:ColorTransform = new ColorTransform();
+                  colorTransform.redMultiplier = 0.5;
+                  colorTransform.greenMultiplier = 0.5;
+                  colorTransform.blueMultiplier = 0.5;
+                  foreground.transform.colorTransform = colorTransform;
+                  _loc2_.push(foreground);
                   _loc2_.push(new mountainsBackground());
                   param1.background = new Background(_loc2_,param1);
                   param1.addChild(param1.background);
